@@ -31,21 +31,29 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
       
 ------ Tab
      local Tab1o = MakeTab({Name = "Script Farm"})
-     local Tab2o = MakeTab({Name = "script PvP"})
-     
+     local Tab2o = MakeTab({Name = "script pvp"})
 ------- BUTTON
     
     AddButton(Tab1o, {
-     Name = "Quantum hub",
+     Name = "Redz Hub",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
+  end
+  })
+  AddButton(Tab1o, {
+     Name = "Quantum",
     Callback = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()
-	  
 	  AddButton(Tab1o, {
      Name = "Gravity hub",
     Callback = function()
 	  loadstring(game:HttpGet("https://raow.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
-	  
 	  AddButton(Tab2o, {
-     Name = "onion v8",
+     Name = "onionv8",
     Callback = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/onion132005-bit/Onion133/refs/heads/main/V8.lua", true))()
